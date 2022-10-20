@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WCFCliente"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
-        <Button Content="Register" HorizontalAlignment="Center" Margin="0,330,0,0" VerticalAlignment="Top" Click="Button_Click" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Center" Margin="0,330,0,0" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Click="btnRegister_Click"/>
         <TextBox HorizontalAlignment="Center" Margin="0,184,0,0" TextWrapping="Wrap" Text="Ej.Luisito" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.504,-5.037" IsEnabled="False"/>
         <PasswordBox HorizontalAlignment="Center" Margin="0,252,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="UserName" HorizontalAlignment="Left" Margin="336,158,0,0" VerticalAlignment="Top"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="336,226,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.447,0.31"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="348,51,0,0" VerticalAlignment="Top" Width="100" Source="/icons8-usuario-30.png"/>
-        <Button Content="Login" HorizontalAlignment="Center" Margin="0,287,0,0" VerticalAlignment="Top" Width="104" Click="Button_Click_1"/>
-
+        <Image HorizontalAlignment="Left" Height="100" Margin="348,51,0,0" VerticalAlignment="Top" Width="100" Source="/Images/icons8-usuario-30.png"/>
+        <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Center" Margin="0,287,0,0" VerticalAlignment="Top" Width="104" Click="btnLogin_Click" />
+        <Frame x:Name="Contenedor" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
