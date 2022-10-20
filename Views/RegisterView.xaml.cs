@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -35,6 +37,14 @@ namespace WCFCliente.Views
             if (ValidateFields())
             {
                 int result = client.AddPlayer(player);
+                if (result == 0)
+                {
+                    MessageBox.Show("Error occurred, registration didn't take effect");
+                }
+                else
+                {
+                    MessageBox.Show("Successful registration.");
+                }
                 Console.WriteLine(result);
             }
 
@@ -77,9 +87,9 @@ namespace WCFCliente.Views
 
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.Visibility = Visibility.Visible;
-            Window win = (Window)this.Parent;
-            win.Close();
-
+            ResgisterView win = new ResgisterView();
+            win.Visibility = Visibility.Collapsed;
+            
 
         }
     }
