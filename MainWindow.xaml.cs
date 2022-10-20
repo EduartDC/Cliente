@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WCFCliente.MessageService;
+using WCFCliente.Views;
 
 namespace WCFCliente
 {
@@ -21,17 +22,20 @@ namespace WCFCliente
     /// </summary>
     public partial class MainWindow : Window
     {
+        ResgisterView registerView = new ResgisterView();
+
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
             
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            Contenedor.NavigationService.Navigate(registerView);
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
 
         }
