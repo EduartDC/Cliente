@@ -8,136 +8,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WCFCliente.MessageService {
+namespace WCFCliente.ConnectService {
     using System.Runtime.Serialization;
     using System;
     
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/MessageService")]
-    [System.SerializableAttribute()]
-    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LastNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UserNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LastName {
-            get {
-                return this.LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
-                    this.LastNameField = value;
-                    this.RaisePropertyChanged("LastName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UserName {
-            get {
-                return this.UserNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
-                    this.UserNameField = value;
-                    this.RaisePropertyChanged("UserName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Manager", Namespace="http://schemas.datacontract.org/2004/07/MessageService")]
-    [System.SerializableAttribute()]
-    public partial class Manager : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LastNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UserNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LastName {
-            get {
-                return this.LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
-                    this.LastNameField = value;
-                    this.RaisePropertyChanged("LastName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UserName {
-            get {
-                return this.UserNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
-                    this.UserNameField = value;
-                    this.RaisePropertyChanged("UserName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Player", Namespace="http://schemas.datacontract.org/2004/07/DataAcces")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Player", Namespace="http://schemas.datacontract.org/2004/07/DataBase")]
     [System.SerializableAttribute()]
     public partial class Player : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -145,10 +23,10 @@ namespace WCFCliente.MessageService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WCFCliente.MessageService.Friend[] FriendsField;
+        private WCFCliente.ConnectService.Friend[] FriendsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WCFCliente.MessageService.Match[] MatchesField;
+        private WCFCliente.ConnectService.Match[] MatchesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string emailField;
@@ -182,7 +60,7 @@ namespace WCFCliente.MessageService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WCFCliente.MessageService.Friend[] Friends {
+        public WCFCliente.ConnectService.Friend[] Friends {
             get {
                 return this.FriendsField;
             }
@@ -195,7 +73,7 @@ namespace WCFCliente.MessageService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WCFCliente.MessageService.Match[] Matches {
+        public WCFCliente.ConnectService.Match[] Matches {
             get {
                 return this.MatchesField;
             }
@@ -310,7 +188,7 @@ namespace WCFCliente.MessageService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Friend", Namespace="http://schemas.datacontract.org/2004/07/DataAcces")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Friend", Namespace="http://schemas.datacontract.org/2004/07/DataBase")]
     [System.SerializableAttribute()]
     public partial class Friend : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -318,7 +196,7 @@ namespace WCFCliente.MessageService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WCFCliente.MessageService.Player PlayerField;
+        private WCFCliente.ConnectService.Player PlayerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int Player_idPlayerField;
@@ -343,7 +221,7 @@ namespace WCFCliente.MessageService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WCFCliente.MessageService.Player Player {
+        public WCFCliente.ConnectService.Player Player {
             get {
                 return this.PlayerField;
             }
@@ -419,7 +297,7 @@ namespace WCFCliente.MessageService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Match", Namespace="http://schemas.datacontract.org/2004/07/DataAcces")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Match", Namespace="http://schemas.datacontract.org/2004/07/DataBase")]
     [System.SerializableAttribute()]
     public partial class Match : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -427,10 +305,10 @@ namespace WCFCliente.MessageService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WCFCliente.MessageService.Player[] PlayersField;
+        private WCFCliente.ConnectService.Player[] PlayersField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WCFCliente.MessageService.Question[] QuestionsField;
+        private WCFCliente.ConnectService.Question[] QuestionsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int idMatchField;
@@ -458,7 +336,7 @@ namespace WCFCliente.MessageService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WCFCliente.MessageService.Player[] Players {
+        public WCFCliente.ConnectService.Player[] Players {
             get {
                 return this.PlayersField;
             }
@@ -471,7 +349,7 @@ namespace WCFCliente.MessageService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WCFCliente.MessageService.Question[] Questions {
+        public WCFCliente.ConnectService.Question[] Questions {
             get {
                 return this.QuestionsField;
             }
@@ -560,7 +438,7 @@ namespace WCFCliente.MessageService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Question", Namespace="http://schemas.datacontract.org/2004/07/DataAcces")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Question", Namespace="http://schemas.datacontract.org/2004/07/DataBase")]
     [System.SerializableAttribute()]
     public partial class Question : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -568,10 +446,10 @@ namespace WCFCliente.MessageService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WCFCliente.MessageService.Answer[] AnswersField;
+        private WCFCliente.ConnectService.Answer[] AnswersField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WCFCliente.MessageService.Match[] MatchesField;
+        private WCFCliente.ConnectService.Match[] MatchesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int idQuestionField;
@@ -593,7 +471,7 @@ namespace WCFCliente.MessageService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WCFCliente.MessageService.Answer[] Answers {
+        public WCFCliente.ConnectService.Answer[] Answers {
             get {
                 return this.AnswersField;
             }
@@ -606,7 +484,7 @@ namespace WCFCliente.MessageService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WCFCliente.MessageService.Match[] Matches {
+        public WCFCliente.ConnectService.Match[] Matches {
             get {
                 return this.MatchesField;
             }
@@ -669,7 +547,7 @@ namespace WCFCliente.MessageService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Answer", Namespace="http://schemas.datacontract.org/2004/07/DataAcces")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Answer", Namespace="http://schemas.datacontract.org/2004/07/DataBase")]
     [System.SerializableAttribute()]
     public partial class Answer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -677,7 +555,7 @@ namespace WCFCliente.MessageService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WCFCliente.MessageService.Question[] QuestionsField;
+        private WCFCliente.ConnectService.Question[] QuestionsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string answer1Field;
@@ -702,7 +580,7 @@ namespace WCFCliente.MessageService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WCFCliente.MessageService.Question[] Questions {
+        public WCFCliente.ConnectService.Question[] Questions {
             get {
                 return this.QuestionsField;
             }
@@ -777,47 +655,29 @@ namespace WCFCliente.MessageService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MessageService.IUserManager")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ConnectService.IUserManager")]
     public interface IUserManager {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserManager/AddUser", ReplyAction="http://tempuri.org/IUserManager/AddUserResponse")]
-        int AddUser(WCFCliente.MessageService.User user);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserManager/AddUser", ReplyAction="http://tempuri.org/IUserManager/AddUserResponse")]
-        System.Threading.Tasks.Task<int> AddUserAsync(WCFCliente.MessageService.User user);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserManager/GetUserById", ReplyAction="http://tempuri.org/IUserManager/GetUserByIdResponse")]
-        WCFCliente.MessageService.User GetUserById(string userId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserManager/GetUserById", ReplyAction="http://tempuri.org/IUserManager/GetUserByIdResponse")]
-        System.Threading.Tasks.Task<WCFCliente.MessageService.User> GetUserByIdAsync(string userId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserManager/AddManager", ReplyAction="http://tempuri.org/IUserManager/AddManagerResponse")]
-        int AddManager(WCFCliente.MessageService.Manager manager);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserManager/AddManager", ReplyAction="http://tempuri.org/IUserManager/AddManagerResponse")]
-        System.Threading.Tasks.Task<int> AddManagerAsync(WCFCliente.MessageService.Manager manager);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserManager/AddPlayer", ReplyAction="http://tempuri.org/IUserManager/AddPlayerResponse")]
+        int AddPlayer(WCFCliente.ConnectService.Player player);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserManager/AddPlayer", ReplyAction="http://tempuri.org/IUserManager/AddPlayerResponse")]
-        int AddPlayer(WCFCliente.MessageService.Player newPlayer);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserManager/AddPlayer", ReplyAction="http://tempuri.org/IUserManager/AddPlayerResponse")]
-        System.Threading.Tasks.Task<int> AddPlayerAsync(WCFCliente.MessageService.Player newPlayer);
+        System.Threading.Tasks.Task<int> AddPlayerAsync(WCFCliente.ConnectService.Player player);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserManager/ValidatePlayer", ReplyAction="http://tempuri.org/IUserManager/ValidatePlayerResponse")]
-        int ValidatePlayer(WCFCliente.MessageService.Player player);
+        int ValidatePlayer(WCFCliente.ConnectService.Player player);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserManager/ValidatePlayer", ReplyAction="http://tempuri.org/IUserManager/ValidatePlayerResponse")]
-        System.Threading.Tasks.Task<int> ValidatePlayerAsync(WCFCliente.MessageService.Player player);
+        System.Threading.Tasks.Task<int> ValidatePlayerAsync(WCFCliente.ConnectService.Player player);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IUserManagerChannel : WCFCliente.MessageService.IUserManager, System.ServiceModel.IClientChannel {
+    public interface IUserManagerChannel : WCFCliente.ConnectService.IUserManager, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class UserManagerClient : System.ServiceModel.ClientBase<WCFCliente.MessageService.IUserManager>, WCFCliente.MessageService.IUserManager {
+    public partial class UserManagerClient : System.ServiceModel.ClientBase<WCFCliente.ConnectService.IUserManager>, WCFCliente.ConnectService.IUserManager {
         
         public UserManagerClient() {
         }
@@ -838,43 +698,19 @@ namespace WCFCliente.MessageService {
                 base(binding, remoteAddress) {
         }
         
-        public int AddUser(WCFCliente.MessageService.User user) {
-            return base.Channel.AddUser(user);
+        public int AddPlayer(WCFCliente.ConnectService.Player player) {
+            return base.Channel.AddPlayer(player);
         }
         
-        public System.Threading.Tasks.Task<int> AddUserAsync(WCFCliente.MessageService.User user) {
-            return base.Channel.AddUserAsync(user);
+        public System.Threading.Tasks.Task<int> AddPlayerAsync(WCFCliente.ConnectService.Player player) {
+            return base.Channel.AddPlayerAsync(player);
         }
         
-        public WCFCliente.MessageService.User GetUserById(string userId) {
-            return base.Channel.GetUserById(userId);
-        }
-        
-        public System.Threading.Tasks.Task<WCFCliente.MessageService.User> GetUserByIdAsync(string userId) {
-            return base.Channel.GetUserByIdAsync(userId);
-        }
-        
-        public int AddManager(WCFCliente.MessageService.Manager manager) {
-            return base.Channel.AddManager(manager);
-        }
-        
-        public System.Threading.Tasks.Task<int> AddManagerAsync(WCFCliente.MessageService.Manager manager) {
-            return base.Channel.AddManagerAsync(manager);
-        }
-        
-        public int AddPlayer(WCFCliente.MessageService.Player newPlayer) {
-            return base.Channel.AddPlayer(newPlayer);
-        }
-        
-        public System.Threading.Tasks.Task<int> AddPlayerAsync(WCFCliente.MessageService.Player newPlayer) {
-            return base.Channel.AddPlayerAsync(newPlayer);
-        }
-        
-        public int ValidatePlayer(WCFCliente.MessageService.Player player) {
+        public int ValidatePlayer(WCFCliente.ConnectService.Player player) {
             return base.Channel.ValidatePlayer(player);
         }
         
-        public System.Threading.Tasks.Task<int> ValidatePlayerAsync(WCFCliente.MessageService.Player player) {
+        public System.Threading.Tasks.Task<int> ValidatePlayerAsync(WCFCliente.ConnectService.Player player) {
             return base.Channel.ValidatePlayerAsync(player);
         }
     }
