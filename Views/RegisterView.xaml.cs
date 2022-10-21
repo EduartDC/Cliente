@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WCFCliente.MessageService;
+using WCFCliente.ConnectService;
 
 namespace WCFCliente.Views
 {
@@ -31,7 +31,7 @@ namespace WCFCliente.Views
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            MessageService.UserManagerClient client = new MessageService.UserManagerClient();
+            ConnectService.UserManagerClient client = new ConnectService.UserManagerClient();
 
             Player player = PlayerData();
             if (ValidateFields())
@@ -53,14 +53,15 @@ namespace WCFCliente.Views
 
         private Player PlayerData()
         {
-            Player player = new Player();
-
-            player.firstName = TextFirsName.Text;
-            player.lastName = TextLastName.Text;
-            player.email = TextEmail.Text;
-            player.userName = TextUserName.Text;
-            player.password = TextPassword.Password;
-            player.status = true;
+            Player player = new Player
+            {
+                firstName = TextFirsName.Text,
+                lastName = TextLastName.Text,
+                email = TextEmail.Text,
+                userName = TextUserName.Text,
+                password = TextPassword.Password,
+                status = true
+            };
 
             return player;
         }
@@ -85,10 +86,6 @@ namespace WCFCliente.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.Visibility = Visibility.Visible;
-            ResgisterView win = new ResgisterView();
-            win.Visibility = Visibility.Collapsed;
             
 
         }

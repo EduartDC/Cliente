@@ -33,28 +33,9 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8082/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8082/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:8082/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MessageService" />
-      <xsd:import schemaLocation="http://localhost:8082/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DataAcces" />
+      <xsd:import schemaLocation="http://localhost:8082/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DataBase" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IUserManager_AddUser_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddUser" />
-  </wsdl:message>
-  <wsdl:message name="IUserManager_AddUser_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddUserResponse" />
-  </wsdl:message>
-  <wsdl:message name="IUserManager_GetUserById_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserById" />
-  </wsdl:message>
-  <wsdl:message name="IUserManager_GetUserById_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
-  </wsdl:message>
-  <wsdl:message name="IUserManager_AddManager_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddManager" />
-  </wsdl:message>
-  <wsdl:message name="IUserManager_AddManager_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddManagerResponse" />
-  </wsdl:message>
   <wsdl:message name="IUserManager_AddPlayer_InputMessage">
     <wsdl:part name="parameters" element="tns:AddPlayer" />
   </wsdl:message>
@@ -68,18 +49,6 @@
     <wsdl:part name="parameters" element="tns:ValidatePlayerResponse" />
   </wsdl:message>
   <wsdl:portType name="IUserManager">
-    <wsdl:operation name="AddUser">
-      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/AddUser" message="tns:IUserManager_AddUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/AddUserResponse" message="tns:IUserManager_AddUser_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetUserById">
-      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/GetUserById" message="tns:IUserManager_GetUserById_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/GetUserByIdResponse" message="tns:IUserManager_GetUserById_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="AddManager">
-      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/AddManager" message="tns:IUserManager_AddManager_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/AddManagerResponse" message="tns:IUserManager_AddManager_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="AddPlayer">
       <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/AddPlayer" message="tns:IUserManager_AddPlayer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/AddPlayerResponse" message="tns:IUserManager_AddPlayer_OutputMessage" />
@@ -92,33 +61,6 @@
   <wsdl:binding name="NetTcpBinding_IUserManager" type="tns:IUserManager">
     <wsp:PolicyReference URI="#NetTcpBinding_IUserManager_policy" />
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
-    <wsdl:operation name="AddUser">
-      <soap12:operation soapAction="http://tempuri.org/IUserManager/AddUser" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetUserById">
-      <soap12:operation soapAction="http://tempuri.org/IUserManager/GetUserById" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddManager">
-      <soap12:operation soapAction="http://tempuri.org/IUserManager/AddManager" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="AddPlayer">
       <soap12:operation soapAction="http://tempuri.org/IUserManager/AddPlayer" style="document" />
       <wsdl:input>
