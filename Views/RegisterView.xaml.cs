@@ -20,7 +20,7 @@ namespace WCFCliente.Views
 {
     /// <summary>
     /// Interaction logic for ResgisterView.xaml
-    /// </summary>
+    /// soy yo
     public partial class ResgisterView : Page
     {
         
