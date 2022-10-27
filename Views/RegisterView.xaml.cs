@@ -19,12 +19,11 @@ using WCFCliente.ConnectService;
 namespace WCFCliente.Views
 {
     /// <summary>
-    /// Interaction logic for ResgisterView.xaml
-    /// soy yo
-    public partial class ResgisterView : Page
+    /// Interaction logic for ResgisterView.xaml    
+    public partial class RegisterView : Page
     {
         
-        public ResgisterView()
+        public void Register()
         {
             InitializeComponent();
         }
@@ -78,8 +77,6 @@ namespace WCFCliente.Views
             {
                 result = true;
             }
-
-
             return result;
         }
 
@@ -89,5 +86,70 @@ namespace WCFCliente.Views
             
 
         }
+
+        private void TextFirsName_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (!TextFirsName.Text.Equals("") || !TextFirsName.Text.Equals(null))
+            {
+                lblExampleFirstName.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void TextFirsName_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (TextFirsName.Text.Equals("") || TextFirsName.Text.Equals(null))
+            {
+                lblExampleFirstName.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void TextLastName_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (TextLastName.Text.Equals("") || TextLastName.Text.Equals(null))
+            {
+                lblExampleLastName.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void TextLastName_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (!TextLastName.Text.Equals("") || !TextLastName.Text.Equals(null))
+            {
+                lblExampleLastName.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void TextEmail_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (!TextEmail.Text.Equals("") || !TextEmail.Text.Equals(null))
+            {
+                lblExampleEmail.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void TextEmail_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (TextEmail.Text.Equals("") || TextEmail.Text.Equals(null))
+            {
+                lblExampleEmail.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void TextUserName_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (!TextUserName.Text.Equals("") || !TextUserName.Text.Equals(null))
+            {
+                lblExampleUser.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void TextUserName_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (TextUserName.Text.Equals("") || TextUserName.Text.Equals(null))
+            {
+                lblExampleUser.Visibility = Visibility.Visible;
+            }
+        }
+        
     }
 }

@@ -118,42 +118,42 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="btnCancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Cancelar</value>
   </data>
   <data name="btnLogin" xml:space="preserve">
-    <value>Login</value>
+    <value>Iniciar Sesión</value>
   </data>
   <data name="btnRegister" xml:space="preserve">
-    <value>Register</value>
+    <value>Registrar</value>
   </data>
   <data name="lblEmail" xml:space="preserve">
-    <value>Email</value>
+    <value>Correo Electrónico</value>
   </data>
   <data name="lblExampleEmail" xml:space="preserve">
-    <value>Ex.: revo.pa@uv.mx</value>
+    <value>Ej.: revo.pa@uv.mx</value>
   </data>
   <data name="lblExampleFirstName" xml:space="preserve">
-    <value>Ex.: Juan Carlos</value>
+    <value>Ej.: Juan Carlos</value>
   </data>
   <data name="lblExampleLastName" xml:space="preserve">
-    <value>Ex.: Perez Arriaga</value>
+    <value>Ej.: Perez Arriaga</value>
   </data>
   <data name="lblExampleUser" xml:space="preserve">
-    <value>Ex.: RevoGamer</value>
+    <value>Ej.: RevoGamer</value>
   </data>
   <data name="lblExampleUserName" xml:space="preserve">
-    <value>Ex.: LuisGamer</value>
+    <value>Ej.: LuisGamer</value>
   </data>
   <data name="lblFirstName" xml:space="preserve">
-    <value>First Name</value>
+    <value>Nombre</value>
   </data>
   <data name="lblLastName" xml:space="preserve">
-    <value>Last Name</value>
+    <value>Apellidos</value>
   </data>
   <data name="lblPassword" xml:space="preserve">
-    <value>Password</value>
+    <value>Contraseña</value>
   </data>
   <data name="lblUserName" xml:space="preserve">
-    <value>User Name</value>
+    <value>Nombre de Usuario</value>
   </data>
 </root>
