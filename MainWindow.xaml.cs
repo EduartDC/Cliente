@@ -10,34 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using WCFCliente.Views;
-
-namespace WCFCliente
+namespace WCFCliente.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Lógica de interacción para MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
-        ResgisterView registerView = new ResgisterView();
-
+    {        
         public MainWindow()
         {
+
             InitializeComponent();
-            
+            Contenedor.NavigationService.Navigate(new LoginView());
         }
 
-        private void btnRegister_Click(object sender, RoutedEventArgs e)
-        {
-            Contenedor.NavigationService.Navigate(registerView);
-        }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }
