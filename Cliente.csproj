@@ -161,7 +161,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Views\ppGame.png" />
+    <Resource Include="Images\ppGame.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
