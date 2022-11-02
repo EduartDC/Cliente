@@ -101,11 +101,10 @@ namespace WCFCliente.Views
         }
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
-        {            
+        {
 
-            MainWindow mainWindow= new MainWindow();
-            mainWindow.Contenedor.NavigationService.Navigate(new RegisterView());
-            
+            NavigationService.Navigate(new Uri("Views/RegisterView.xaml", UriKind.Relative));
+
         }
     }
 }
