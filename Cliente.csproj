@@ -75,7 +75,6 @@
     </Compile>
 
     <Compile Include="Resources\Accessories.cs" />
-    <Compile Include="Views\InicioJuego.xaml.cs">
       <DependentUpon>InicioJuego.xaml</DependentUpon>
 
     <Compile Include="Views\AccountView.xaml.cs">
@@ -120,7 +119,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\InicioJuego.xaml">
       
     <Page Include="Views\AccountView.xaml">
       <SubType>Designer</SubType>
