@@ -11,20 +11,20 @@
         Width="800" 
         MaxHeight="600" 
         MaxWidth="800">
-    <Grid Background="White">
+    <Grid Background="#0f0e17">
         <Label 
             x:Name="lblUserName" 
             Content = "{x:Static p:Resources.lblExampleUserName}"
             HorizontalAlignment="Center" 
             Margin="0,156,0,0" 
-            VerticalAlignment="Top"/>
+            VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
         <Label 
             x:Name="lblPassword" 
             Content= "{x:Static p:Resources.lblPassword}" 
             HorizontalAlignment="Left" 
             Margin="364,221,0,0" 
             VerticalAlignment="Top" 
-            RenderTransformOrigin="0.447,0.31"
+            RenderTransformOrigin="0.447,0.31" Foreground="White" FontWeight="Bold"
         />
         <Image 
             HorizontalAlignment="Left" 
@@ -52,7 +52,7 @@
             Foreground="#FF6E7471" 
             Width="120" Height="28" 
             VerticalContentAlignment="Center" 
-            HorizontalContentAlignment="Center"
+            HorizontalContentAlignment="Center" FontStyle="Italic"
         />
         <TextBox 
             x:Name="textUserName" 

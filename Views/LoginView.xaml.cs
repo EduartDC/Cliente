@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,8 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WCFCliente.ConnectService;
-
-
+using WCFCliente.Resources;
 
 namespace WCFCliente.Views
 {
@@ -31,11 +31,19 @@ namespace WCFCliente.Views
         {
             ConnectService.UserManagerClient client = new ConnectService.UserManagerClient();
 
-            Player player = new Player
-            {                
-                userName = textUserName.Text,
-                password = textPassword.Password
-            };
+            String userName = textUserName.Text;
+            String password = textPassword.Password.ToString();
+          
+
+            if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show(Properties.Resources.messageBoxEmptyFields);
+            }
+            else
+            {
+                password = Accessories.sha256(password);
+                validateCredentials(userName, password);
+            }
 
             if (ValidateFields())
             {
@@ -46,11 +54,37 @@ namespace WCFCliente.Views
                 }
                 else
                 {
+                  
                     NavigationService.Navigate(new Uri("Views/InicioView.xaml", UriKind.Relative));
                 }
                 Console.WriteLine(result);
             }
 
+        }
+
+        private void validateCredentials(string userName, string password)
+        {
+            try
+            {
+                var playerProfile = playerProfileManagementClient.Login(username, password);
+                if (playerProfile != null)
+                {
+                    playerProfileManagementClient.Close();
+                    GoToMainMenu(playerProfile);
+                }
+                else
+                {
+                    MessageBox.Show(Properties.Resources.CHECK_ENTERED_INFORMATION_LABEL,
+                              Properties.Resources.INVALID_DATA_WINDOW_TITLE);
+                    PasswordBox.Clear();
+                }
+            }
+            catch (EndpointNotFoundException)
+            {
+                MessageBox.Show(Properties.Resources.TRY_AGAIN_LATER_LABEL,
+                    Properties.Resources.NO_SERVER_CONNECTION_WINDOW_TITLE);
+                Close();
+            }
         }
 
         private void textUserName_GotFocus(object sender, RoutedEventArgs e)
