@@ -176,5 +176,6 @@ namespace WCFCliente.Properties {
                 return ResourceManager.GetString("lblUserName", resourceCulture);
             }
         }
+
     }
 }

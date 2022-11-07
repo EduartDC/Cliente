@@ -82,9 +82,7 @@ namespace WCFCliente.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            
-
+            NavigationService.Navigate(new Uri("Views/LoginView.xaml", UriKind.Relative));
         }
 
         private void TextFirsName_GotFocus(object sender, RoutedEventArgs e)
