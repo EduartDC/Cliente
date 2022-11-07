@@ -36,6 +36,7 @@ namespace WCFCliente.Views
             if (ValidateFields())
             {
                 int result = client.AddPlayer(player);
+
                 if (result == 0)
                 {
                     MessageBox.Show("Error occurred, registration didn't take effect");
@@ -44,7 +45,7 @@ namespace WCFCliente.Views
                 {
                     MessageBox.Show("Successful registration.");
                 }
-                Console.WriteLine(result);
+                
             }
 
 
@@ -82,7 +83,9 @@ namespace WCFCliente.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             NavigationService.Navigate(new Uri("Views/LoginView.xaml", UriKind.Relative));
+
         }
 
         private void TextFirsName_GotFocus(object sender, RoutedEventArgs e)

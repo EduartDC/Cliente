@@ -54,8 +54,8 @@ namespace WCFCliente.Views
                 }
                 else
                 {
-                    MessageBox.Show("Welcome to 100 Mexicanos Dijeron!");
-                    NavigationService.Navigate(new Uri("Views/InicioJuego.xaml", UriKind.Relative));
+                  
+                    NavigationService.Navigate(new Uri("Views/InicioView.xaml", UriKind.Relative));
                 }
                 Console.WriteLine(result);
             }
@@ -136,6 +136,7 @@ namespace WCFCliente.Views
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
+
             NavigationService.Navigate(new Uri("Views/RegisterView.xaml", UriKind.Relative));
 
         }

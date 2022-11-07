@@ -32,7 +32,8 @@
             Margin="348,51,0,0" 
             VerticalAlignment="Top" 
             Width="100" 
-            Source="/Views/ppGame.png"
+            Source="/Images/ppGame.png"
+
         />
         <Button 
             x:Name="btnLogin" 
