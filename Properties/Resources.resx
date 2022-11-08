@@ -156,7 +156,4 @@
   <data name="lblUserName" xml:space="preserve">
     <value>User Name</value>
   </data>
-  <data name="messageBoxEmptyFields" xml:space="preserve">
-    <value>There are one or more missing fields, please correct them.</value>
-  </data>
 </root>

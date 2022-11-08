@@ -156,7 +156,4 @@
   <data name="lblUserName" xml:space="preserve">
     <value>Nombre de Usuario</value>
   </data>
-  <data name="messageBoxEmptyFields" xml:space="preserve">
-    <value>Existen uno o más campos sin llenar, por favor corríge.</value>
-  </data>
 </root>
